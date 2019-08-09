@@ -1,0 +1,33 @@
+.table-responsive {
+    overflow-x: auto;
+    background: #fff;
+    .table {
+        width: 100%;
+       min-width: 700px;
+       .zero-state {
+            text-align: center;
+            font-size: 20px;
+            padding: 30px 10px;
+       }
+    }
+    tr {
+        min-height: 56px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+        th {
+            text-align: left;
+        }
+        td, th {
+            flex: 1;
+            &:first-child {
+                padding-left: 20px;
+            }
+        }
+    }
+    tbody {
+        tr:last-child {
+            border-bottom: none;
+        }
+    }
+}

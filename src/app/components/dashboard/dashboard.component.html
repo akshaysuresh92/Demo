@@ -1,0 +1,6 @@
+<div class="pal">
+    <div class="search-container">
+        <app-search (searchEmitter)="performSearch($event)"></app-search>
+    </div>
+    <app-order-list [searchText]="searchText"></app-order-list>
+</div>

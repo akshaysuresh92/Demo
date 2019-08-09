@@ -1,0 +1,14 @@
+.parent-container {
+    .heading {
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    .example-spacer {
+        flex: 1 1 auto;
+    }
+
+    .mat-sidenav-container{
+        height: calc(100vh - 64px) !important;
+    }
+}

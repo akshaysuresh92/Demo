@@ -1,0 +1,24 @@
+<form class="example-form">
+    <div class="box-shadow">
+        <div class="sub-heading pam allCaps">
+            Shipment Information
+        </div>
+        <div class="pam">
+            <div class="sub-menu-heading mbl allCaps">Equipment</div>
+            <div class="form-section radio-group">
+                <mat-radio-button value="1">Option 1</mat-radio-button>
+                <mat-radio-button value="2">Option 2</mat-radio-button>
+                <mat-radio-button value="3">Option 3</mat-radio-button>
+            </div>
+            <div class="sub-menu-heading allCaps mtl">Commodity</div>
+            <mat-form-field>
+                <input matInput placeholder="commodity" [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of commodityList" [value]="option">
+                        {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </div>
+    </div>
+</form>

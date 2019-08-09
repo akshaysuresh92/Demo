@@ -1,0 +1,16 @@
+.example-form {
+    .mat-form-field, mat-checkbox {
+        flex: 1;
+        margin-right: 2%;
+    }
+    .sub-menu-heading {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .flexbox {
+        display: flex;
+    }  
+    .capitalize {
+        text-transform: capitalize;
+    }
+}

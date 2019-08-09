@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+body {
+    margin: 0;
+}
+
+.pal {
+    padding: 20px;
+}
+
+.ellipse {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.box-shadow {
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2),
+                    0 8px 10px 1px rgba(0,0,0,.14),
+                    0 3px 14px 2px rgba(0,0,0,.12);
+}
+.allCaps {
+    text-transform: uppercase;
+}
+.sub-heading {
+    font-size: 18px;
+    background: #ccc;
+}
+.center {
+    text-align: center;
+}
+.pam {
+    padding: 20px;
+}
+.mbl {
+    margin-bottom: 20px;
+}
+.mtl {
+    margin-top: 20px;
+}

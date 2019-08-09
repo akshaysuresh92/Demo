@@ -1,0 +1,55 @@
+<form class="example-form">
+    <div class="box-shadow">
+        <div class="sub-heading pam allCaps">
+            Lane Information
+        </div>
+        <div class="pam">
+            <div>
+                <div class="sub-menu-heading allCaps">Origin</div>
+                <div class="flexbox">
+                    <mat-form-field>
+                        <input matInput placeholder="City" name="originCity" [(ngModel)]='originCity' (ngModelChange)="getZipCode($event,'origin')">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="State" name="originState" [(ngModel)]='originState'>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Country" name="originCountry" [(ngModel)]='originCountry'>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Enter a zip code" name="originZipCode" [(ngModel)]='originZipCode' (ngModelChange)="getAddress($event, 'origin')">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div>
+                <div class="sub-menu-heading allCaps mbl">Stop Requirements
+                    <span class="capitalize">(Optional)</span>
+                </div>
+                <div class="flexbox">
+                    <mat-checkbox>Lift Gate</mat-checkbox>
+                    <mat-checkbox>Recidential</mat-checkbox>
+                    <mat-checkbox>Office</mat-checkbox>
+                    <mat-checkbox>Inside Pickup</mat-checkbox>
+                </div>
+
+            </div>
+            <div>
+                <div class="sub-menu-heading allCaps mtl">Destination</div>
+                <div class="flexbox">
+                    <mat-form-field>
+                        <input matInput placeholder="City" name="destinationCity" [(ngModel)]='destinationCity' (ngModelChange)="getZipCode($event,'destination')">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="State" name="destinationState" [(ngModel)]='destinationState'>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Country" name="destinationCountry" [(ngModel)]='destinationCountry'>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Enter a zip code" name="destinationZipCode" [(ngModel)]='destinationZipCode' (ngModelChange)="getAddress($event, 'destination')">
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

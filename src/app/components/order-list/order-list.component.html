@@ -1,0 +1,23 @@
+<div class='table-responsive box-shadow'>
+    <table class='table' *ngIf='orderList && orderList.length'>
+        <thead>
+            <tr>
+                <th>Order Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contact No</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody #myTable>
+            <tr *ngFor='let order of orderList | search: searchText'>
+                <td class="ellipse">{{ order.orderId }}</td>
+                <td class="ellipse">{{ order.name }}</td>
+                <td class="ellipse">{{ order.email }}</td>
+                <td class="ellipse">{{ order.contactNumber }}</td>
+                <td class="ellipse">{{ order.price | currency:'USD':'symbol':'1.2-2' }}</td>
+            </tr>
+        </tbody>
+        <div class="zero-state" *ngIf="!myTable.rows.length">No orders Found</div>
+    </table>
+</div>

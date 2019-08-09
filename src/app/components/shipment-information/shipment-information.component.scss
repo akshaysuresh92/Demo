@@ -1,0 +1,16 @@
+.example-form {
+    .form-section {
+        display: flex;
+        justify-content: space-between;
+    }
+    .mat-form-field {
+        width: 32%;
+    }
+    .sub-menu-heading {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .radio-group {
+        width: 50%;
+    }
+}

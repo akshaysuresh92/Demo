@@ -1,0 +1,38 @@
+<form class="example-form" [formGroup]="contactInfoForm" (ngSubmit)="onSubmit()">
+    <div class="box-shadow">
+        <div class="sub-heading pam allCaps">
+            Contact Information
+        </div>
+        <div class="pam form-section">
+            <mat-form-field>
+                <input matInput placeholder="Name" formControlName="name" minlength="3">
+                <mat-error *ngIf="contactInfoForm.get('name').errors?.required">
+                    Please enter your name
+                </mat-error>
+                <mat-error *ngIf="contactInfoForm.get('name').errors?.minlength">
+                    Minimum 3 characters required
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Email" formControlName="email">
+                <mat-error *ngIf="contactInfoForm.get('email').errors?.required">
+                    Please enter your email
+                </mat-error>
+                <mat-error *ngIf="contactInfoForm.get('email').errors?.email">
+                    Please enter a valid email
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Contact Number" formControlName="contactNumber">
+                <mat-error *ngIf="contactInfoForm.get('contactNumber').errors?.required">
+                    Please enter your contact number
+                </mat-error>
+                <mat-error *ngIf="contactInfoForm.get('contactNumber').errors?.pattern || contactInfoForm.get('contactNumber').errors?.minlength || contactInfoForm.get('contactNumber').errors?.maxlength">
+                        Please enter a valid contact number
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+</form>
